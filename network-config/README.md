@@ -8,6 +8,40 @@ device's CLI.
 
 ---
 
+## ⚠️ Important: About Packet Tracer Files
+
+**Cisco Packet Tracer `.pkt` files are proprietary binary files** that can
+only be created and edited inside the Packet Tracer application itself. They
+cannot be generated or modified outside of the program.
+
+**What this means for you:**
+
+- You must **use your own existing `.pkt` file** that already has the
+  network topology built (routers, switches, PCs, cables, etc.).
+- This guide gives you the **exact CLI commands** to paste into each
+  device's terminal inside Packet Tracer.
+- You do **not** need to upload your `.pkt` file anywhere — just open it in
+  Packet Tracer and follow the steps below.
+
+## How to Use This Guide
+
+1. **Open your `.pkt` file** in Cisco Packet Tracer.
+2. **Click on a device** (e.g., CORE-SW) in the topology.
+3. Go to the **CLI** tab in the device window that opens.
+4. **Copy the commands** from the matching configuration file below
+   (e.g., [01-CORE-SW.md](01-CORE-SW.md)) and **paste them** into the
+   CLI tab, one section at a time.
+5. **Repeat** for each device in the order listed in the
+   [Configuration Files](#configuration-files) table.
+6. After configuring all devices, use
+   [07-Verification.md](07-Verification.md) to confirm everything works.
+
+> **Tip:** Paste commands one block at a time and wait for the prompt to
+> return before pasting the next block. This avoids errors from commands
+> being sent too fast.
+
+---
+
 ## Network Topology
 
 ```
@@ -61,3 +95,8 @@ Apply the configurations in this order:
 | 5 | IPv6        | [05-IPv6-Config.md](05-IPv6-Config.md)                 |
 | 6 | IoT / Wi-Fi | [06-Wireless-IoT.md](06-Wireless-IoT.md)               |
 | 7 | Verification| [07-Verification.md](07-Verification.md)               |
+
+> **Note:** Adjust interface names (e.g., `FastEthernet0/1`,
+> `GigabitEthernet0/1`) if the ports in your `.pkt` topology differ from
+> the defaults used in these guides. Check which port each cable is
+> connected to by clicking the cable in Packet Tracer.
